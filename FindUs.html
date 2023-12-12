@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <link rel="icon" href="Favicon.png" type="image/x-icon">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN_0U4SnhhLhiSP1ohdapFUbYLLFUslMc&callback=initMap" defer></script>
+    <title>Find Us</title>
+</head>
+<body>
+    <header>
+        <h1>Meown</h1>
+        <p>A blog for cat lovers</p>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="FindUs.html">Find Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="blog-posts">
+            <div class="post">
+                <h3>Come visit us at: 24 Cattington St. Edmonton, AB!</h3>
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+    
+  
+
+    <footer>
+        <p>&copy; 2023 Hope Israel. All Images belong to https://unsplash.com/.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html"; 
+        }
+
+        function initMap() {
+            var edmontonLatLng = new google.maps.LatLng(53.5444, -113.4909); 
+            var mapProp = {
+                center: edmontonLatLng,
+                zoom: 12,
+            };
+            window.map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+</body>
+</html>

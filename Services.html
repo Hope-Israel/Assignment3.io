@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair%20Display' rel='stylesheet'>
+    <link rel="icon" href="Favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    
+    <title>Meown Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Meown</h1>
+        <p>A blog for cat lovers</p>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="FindUs.html">Find Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+        </ul>
+    </nav>
+    <div class="container2">
+        <div class="row">
+            <div class="text-section">
+                <h2>Meown Services</h2>
+                <p>Here at Meown, we only want the best for our cats, and that's why we only ever 
+                    recommend the best of the best.
+                </p>
+                <br>
+                <i> ~ Hope Israel - Meown Founder</i>
+                <br> <br>
+                
+                <h2>Grooming Services</h2>
+                
+                <div class="testimonial-section">
+                    <div class="testimonial">
+                        <h3>Kitty Spa Day</h3>
+                        <p>A complete step by step spa day for your feline to enjoy.
+                            Face masks, coat gloss, and claw polish included!
+                        </p>
+                    </div>
+                    <div class="testimonial">
+                        <h3>Trimming</h3>
+                        <p>Have your Cat looking their best with our fur trimming services!
+                        </p>
+                        
+                    </div>
+                    <div class="testimonial">
+                        <h3>Paw Cleansing</h3>
+                        <p>Does your Cat come home with dirty paws? Look no further! We've got you covered!
+                        </p>
+                        
+                    </div>
+                    <div class="testimonial">
+                        <h3>Ear Cleaning</h3>
+                        <p>Is your Cat in need of ear cleaning? We offer an effective and gentle ear cleaning service!
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog-posts">
+            <div class="post">
+                <section class="main-section">
+                    <div class="accordion-container">
+                        <h2>Kitty Day Camp</h2>
+                        <div id="accordion1">
+                            <h3>3-5 Months</h3>
+                            <div>
+                                <p>For our younger cats and kittens, we provide a more gentle approach,
+                                    consisting primarily of naptime, 
+                                </p>
+                                <img src="prasad-panchakshari-8R7jmQEzALQ-unsplash.jpg" alt="Cute Cat Image 2" class="cat-image2">
+                            </div>
+                            <h3>6 Months to 7 Year old Cats</h3>
+                            <div>
+                                <p>For our most common age group, being cats between the ages of 6 months and 7 years of age,
+                                    we have the most expansive range of activities to provide. 
+                                    We provide play areas, social hours, and nap time.
+                                </p>
+                                <img src="mikhail-vasilyev-NodtnCsLdTE-unsplash.jpg" alt="Cute Cat Image 3" class="cat-image3">
+                            </div>
+                            <h3>Old Timers</h3>
+                            <div>
+                                <p>For our Cats within an older age range, we provide a more laid back
+                                    approach, primarily consisting of lots of gentle exercise and naps.
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            
+            <div class="post">
+                <section class="main-section">
+                    <h2>Kitty Hotel</h2>
+                    <button class="collapsible" onclick="toggleCollapsible('tab1')">Short Term Stay</button>
+                    <div class="content" id="tab1">
+                        <p>For short term stays ranging from 6 hours to a day</p>
+                        <i>$25 for 6 hours - $35 for 24 hours</i>
+                    </div>
+                    
+                    <button class="collapsible" onclick="toggleCollapsible('tab2')">Long Term Stay</button>
+                    <div class="content" id="tab2">
+                        <p>For long term stays ranging from one to two weeks</p>
+                        <i>$190 per week</i>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        $(document).ready(function() {
+            $("#accordion1").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+        });
+        
+        function toggleCollapsible(tabId) {
+            var content = document.getElementById(tabId);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2023 Hope Israel. All Images belong to https://unsplash.com/.</p>
+    </footer>
+</body>
+</html>
+
